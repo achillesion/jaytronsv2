@@ -6,7 +6,7 @@ import { FaReact, FaWordpress, FaFigma, FaMobile, FaBars, FaTimes, FaArrowLeft }
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 import { Calendar } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 
 // Smooth scroll function
 const smoothScrollTo = (elementId) => {
@@ -39,12 +39,11 @@ export default function Navbar({
     },
 
   ],
-  ctaText = "Let's Talk",
+  ctaText = "Schedual a Call",
   ctaHref = "/Whatsapp",
   className = ""
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -83,10 +82,10 @@ export default function Navbar({
       <nav ref={dropdownRef} className={`fixed top-3 left-1/2 -translate-x-1/2 p-4 md:p-4 z-50 transition-all duration-200 ease-in-out ${isScrolled
           ? 'w-[870px] border border-gray-500 rounded-lg backdrop-blur-lg bg-black/20'
           : 'w-[1070px] border-0 rounded-none backdrop-blur-none bg-transparent'
-        } ${className}`}>
+        } ${className}`} style={{ isolation: 'isolate' }}>
         <div className="flex w-full justify-between items-center x-auto">
           <div className="flex items-center gap-10">
-            <h1 className="transition-all duration-300 hover:scale-105 cursor-pointer text-white">{brandName}</h1>
+            <h1 className="transition-all duration-300 hover:scale-105 cursor-pointer text-foreground font-bold">{brandName}</h1>
           </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center font-regular gap-10 text-sm">
@@ -96,7 +95,7 @@ export default function Navbar({
 
                   <Link
                     href={item.href}
-                    className="relative transition-all duration-300 hover:scale-105 flex items-center cursor-pointer font-reguler text-white"
+                    className="relative transition-all duration-300 hover:scale-105 flex items-center cursor-pointer font-reguler text-foreground"
                   >
                     <span>{item.label}</span>
                   </Link>
@@ -108,34 +107,36 @@ export default function Navbar({
                     smoothScrollTo(item.href);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="relative transition-all duration-300  flex items-center text-white  font-reguler  cursor-pointer"
+                  className="relative transition-all duration-300  flex items-center text-foreground  font-reguler  cursor-pointer"
                 >
                   <span>{item.label}</span>
                 </button>
               )
             ))}
           </div>
-          {/* Theme Toggle Button */}
-          <div className="mr-3">
-            <ThemeToggle />
-          </div>
-
+        
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center justify-center gap-2 bg-[#066BDE] rounded-lg p-2 transition-all duration-300 hover:scale-105 cursor-pointer group w-[127px]">
+            <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center justify-center gap-2 bg-[#378066]  text-white 
+             rounded-lg p-2 transition-all duration-300  cursor-pointer group w-[153px] hover:bg-[#2d6b55] ">
             <Calendar className="w-4 h-4" />
             <a
               href="https://wa.me/923215236350"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-sm text-white font-semibold gap-2"
+              className="flex items-center text-sm font-semibold gap-2"
             >
               {ctaText}
             </a>
           </div>
+          <ThemeToggle />
+            </div>
+
+        
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2 "
+            className="md:hidden text-foreground p-2 "
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -145,8 +146,8 @@ export default function Navbar({
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden fixed top-[72px] left-0 w-full bg-black/90 backdrop-blur-lg border-t
-             border-gray-700 transition-all duration-300 ease-in-out overflow-hidden z-40 ${isMobileMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'
+          className={`md:hidden fixed top-[72px] left-0 w-full bg-background/90 backdrop-blur-lg border-t
+             border-border transition-all duration-300 ease-in-out overflow-hidden z-40 ${isMobileMenuOpen ? 'max-h-screen opacity-100 visible' : 'max-h-0 opacity-0 invisible'
             }`}
         >
           <div
@@ -161,7 +162,7 @@ export default function Navbar({
                     smoothScrollTo(item.href);
                     setIsMobileMenuOpen(false);
                   }}
-                  className="text-white text-lg font-medium hover:text-[#13AA02] transition-colors duration-300 text-left"
+                  className="text-foreground text-lg font-medium hover:text-primary transition-colors duration-300 text-left"
                 >
                   {item.label}
                 </button>
@@ -172,7 +173,7 @@ export default function Navbar({
                 href="https://wa.me/923215236350"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#066BDE] rounded-lg py-3 text-white font-semibold hover:bg-[#005FCC] transition-all"
+                className="flex items-center justify-center gap-2 bg-[#378066] dark:bg-yellow-200 text-white dark:text-black rounded-lg py-3 font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300 transition-all"
               >
                 <Calendar className="w-4 h-4" />
                 {ctaText}
