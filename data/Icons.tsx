@@ -23,7 +23,7 @@ export const VercelIcon = () => (
 );
 
 export const ReactIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='bg-[#000000]  p-4 rounded-xl flex items-center  border'>
     <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100">
       <path fill="#61DAFB" d="M50.307 58.816a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632" />
       <path stroke="#61DAFB" strokeWidth="5" d="M50.307 68.063c26.126 0 47.306-8.087 47.306-18.063s-21.18-18.062-47.306-18.062C24.18 31.938 3 40.024 3 50s21.18 18.063 47.307 18.063Z" />
