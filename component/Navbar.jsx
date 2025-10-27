@@ -5,8 +5,8 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaReact, FaWordpress, FaFigma, FaMobile, FaBars, FaTimes, FaArrowLeft } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
-
 import { Calendar } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 // Smooth scroll function
 const smoothScrollTo = (elementId) => {
@@ -79,7 +79,7 @@ export default function Navbar({
 
   return (
 
-    <div className="relative ">
+    <div className="relative">
       <nav ref={dropdownRef} className={`fixed top-3 left-1/2 -translate-x-1/2 p-4 md:p-4 z-50 transition-all duration-200 ease-in-out ${isScrolled
           ? 'w-[870px] border border-gray-500 rounded-lg backdrop-blur-lg bg-black/20'
           : 'w-[1070px] border-0 rounded-none backdrop-blur-none bg-transparent'
@@ -115,8 +115,13 @@ export default function Navbar({
               )
             ))}
           </div>
+          {/* Theme Toggle Button */}
+          <div className="mr-3">
+            <ThemeToggle />
+          </div>
+
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center  justify-center gap-2 bg-[#066BDE] rounded-lg p-2 transition-all duration-300 hover:scale-105 cursor-pointer group w-[127px]">
+          <div className="hidden md:flex items-center justify-center gap-2 bg-[#066BDE] rounded-lg p-2 transition-all duration-300 hover:scale-105 cursor-pointer group w-[127px]">
             <Calendar className="w-4 h-4" />
             <a
               href="https://wa.me/923215236350"
