@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import LaptopCarousal from '@/component/LaptopCarousal'
+import LaptopCarousal from '@/components/LaptopCarousal'
 
 const Hero = () => {
   return (

@@ -4,7 +4,7 @@ import React from 'react'
 const Expertise = () => {
   return (
     <div className='bg-forground w-full'>
-      <div className='min-h-screen container mx-auto flex flex-col gap-20 '>
+      <div className='min-h-screen container mx-auto flex flex-col gap-20  mb-20'>
         <div className='w-full text-center font-medium mt-20'>
           <h1 className='text-[64px]'>Expertise Across</h1>
           <h1 className='text-[64px] animated-gradient-text-2'>Modern Technologies</h1>
@@ -12,7 +12,7 @@ const Expertise = () => {
           <p className='mt-10 max-w-[500px] m-auto'>Building scalable solutions with cutting-edge tools across web, mobile, AI, and cloud technologies</p>
         </div>
 
-        <div className="relative w-full overflow-hidden  sm:mt-8 md:mt-10 space-y-4 mt-10 max-w-7xl m-auto">
+        <div className="relative w-full overflow-hidden  sm:mt-8 md:mt-10   max-w-7xl m-auto flex flex-col">
           {/* First row - scrolling left */}
           <div className="flex animate-scroll-left gap-8 sm:gap-12 md:gap-16 lg:gap-20">
             {techIcons.map((IconComponent, index) => (

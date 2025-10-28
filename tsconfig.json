@@ -37,7 +37,7 @@
     "**/*.mts",
     ".next\\dev/types/**/*.ts",
     ".next\\dev/types/**/*.ts",
-    "component/Navbar.jsx"
+    "components/Navbar.jsx"
   ],
   "exclude": [
     "node_modules"

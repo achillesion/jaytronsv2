@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { FaArrowRight } from 'react-icons/fa'
 
 const LaptopCarousal = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -54,14 +55,18 @@ const LaptopCarousal = () => {
     }
   ]
 
-  // Auto-slide functionality
+  // Auto-slide functionality with pause on hover
+  const [isPaused, setIsPaused] = useState(false);
+  
   useEffect(() => {
-    const timer = setInterval(() => {
+    const timer = isPaused ? null : setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length)
     }, 5000) // Increased to 5 seconds to better see the sliding
 
-    return () => clearInterval(timer)
-  }, [images.length])
+    return () => {
+      if (timer) clearInterval(timer);
+    }
+  }, [images.length, isPaused])
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % images.length)
@@ -78,20 +83,25 @@ const LaptopCarousal = () => {
   return (
     <div className="w-full max-w-6xl mx-auto ">
       {/* Laptop Frame */}
-      <div className="relative mx-auto" style={{ width: '800px', height: '500px' }}>
+      <div 
+        className="relative mx-auto" 
+        style={{ width: '900px', height: '600px' }}
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         {/* Laptop Base */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-8 bg-gray-300 dark:bg-gray-700 rounded-b-lg shadow-lg"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-8  rounded-b-lg shadow-lg"></div>
         
         {/* Laptop Screen */}
-        <div className="relative w-full h-full bg-gray-900 dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden">
+        <div className="relative w-full h-full bg-transparent border rounded-lg shadow-2xl overflow-hidden">
           {/* Screen Bezel */}
           <div className="absolute inset-2 bg-black rounded-md overflow-hidden">
             {/* Screen Content */}
             <div className="relative w-full h-full bg-gray-100 dark:bg-gray-900 ">
               {/* Navigation Arrows */}
-              <button
+              {/* <button
                 onClick={prevSlide}
-                className="absolute hidden left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
+                className=" absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -99,11 +109,11 @@ const LaptopCarousal = () => {
               
               <button
                 onClick={nextSlide}
-                className="absolute hidden right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-              </button>
+              </button> */}
 
               {/* Image Container */}
               <div className="relative w-full h-full overflow-hidden">
@@ -127,14 +137,11 @@ const LaptopCarousal = () => {
                         alt={image.alt}
                         className="w-full h-full object-cover"
                       />
-                      {/* Image Overlay */}
-                      <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent"></div>
-                      
-                      {/* Project Information Overlay */}
-                      <div className="project-overlay">
-                        <h3 className="text-2xl font-bold mb-2">{image.title}</h3>
-                        <p className="text-sm opacity-90 mb-2">{image.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-3">
+                    <div className="absolute inset-0 left-0 bg-linear-to-t from-black via-black/60 to-transparent"></div>
+                      <div className="project-overlay ">
+                        <h3 className="text-2xl font-bold mb-2 text-left text-on-hover">{image.title}</h3>
+                        <p className="text-sm opacity-90 mb-2 text-left text-on-hover">{image.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-3 text-on-hover">
                           {image.technologies.split(', ').map((tech, techIndex) => (
                             <span 
                               key={techIndex}
@@ -148,15 +155,18 @@ const LaptopCarousal = () => {
                       </div>
 
                       {/* Hover Button */}
-                      <div className="hover-button-overlay flex items-center justify-center opacity-0 bg-black/20">
+                      <div className="hover-button-overlay  flex items-center justify-center opacity-0 bg-black/20">
+                      
                         <a
                           href={image.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-[#378066] dark:bg-yellow-200 text-white dark:text-black px-6 py-3 rounded-lg font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300
-                           transition-all duration-300 transform hover:scale-105 shadow-lg"
+                          className="bg-[#378066] dark:bg-yellow-200 text-white dark:text-black px-3 py-1 rounded-md font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300
+                           transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-sm"
                         >
+                          
                           View Project
+                          <FaArrowRight className='w-3 h-3 rotate-320'/>
                         </a>
                       </div>
                     </div>
@@ -164,21 +174,6 @@ const LaptopCarousal = () => {
                 </div>
               </div>
 
-              {/* Dots Indicator */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                {images.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => goToSlide(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                      index === currentSlide 
-                        ? 'bg-white scale-125' 
-                        : 'bg-white/50 hover:bg-white/75'
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
         </div>

@@ -9,11 +9,11 @@ const stats = [
 
 const CompletedProjects = () => {
   return (
-    <section className="max-w-7xl mx-auto py-20 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <section className="max-w-7xl mx-auto  flex flex-col items-center justify-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-20 text-center">
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center">
-            <h2 className="text-[55px] font-regular text-foreground">{stat.value}</h2>
+            <h2 className="text-[65px] font-regular text-foreground">{stat.value}</h2>
             <p className="text-gray-500 mt-2 text-sm md:text-base">{stat.label}</p>
           </div>
         ))}

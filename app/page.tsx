@@ -1,7 +1,9 @@
 import About from "@/sections/Aboutme";
 import CompletedProjects from "@/sections/CompletedProjects";
 import Expertise from "@/sections/Expertise";
+import Hackathon from "@/sections/hackathon";
 import Hero from "@/sections/Hero";
+import Reviews from "@/sections/Reviews";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
       <CompletedProjects />
       <About />
       <Expertise />
+      <Hackathon />
+      <Reviews />
      </div>
     </div>
   );

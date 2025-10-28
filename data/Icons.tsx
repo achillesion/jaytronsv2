@@ -2,8 +2,9 @@ import React from 'react';
 
 // Individual tech icon components
 export const FigmaIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className=' p-4 rounded-xl flex items-center justify-center border '>
+    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#0ACF83" d="M33.333 100C42.533 100 50 92.533 50 83.333V66.667H33.333c-9.2 0-16.666 7.466-16.666 16.666S24.133 100 33.333 100" />
       <path fill="#A259FF" d="M16.667 50c0-9.2 7.466-16.667 16.666-16.667H50v33.334H33.333c-9.2 0-16.666-7.467-16.666-16.667" />
       <path fill="#F24E1E" d="M16.667 16.667C16.667 7.467 24.133 0 33.333 0H50v33.333H33.333c-9.2 0-16.666-7.466-16.666-16.666" />
@@ -11,49 +12,66 @@ export const FigmaIcon = () => (
       <path fill="#1ABCFE" d="M83.333 50c0 9.2-7.466 16.667-16.666 16.667S50 59.2 50 50s7.467-16.667 16.667-16.667S83.333 40.8 83.333 50" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Figma</h1>
+</div>
 );
 
 export const VercelIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border '>
-    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className='p-4 rounded-xl flex items-center justify-center border '>
+    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#470137" d="M17.708 1h64.584C92.083 1 100 8.917 100 18.708v62.084c0 9.791-7.917 17.708-17.708 17.708H17.708C7.917 98.5 0 90.583 0 80.792V18.708C0 8.917 7.917 1 17.708 1" />
       <path fill="#FF61F6" d="m52.583 26.625-12.5 20.625 13.334 21.875c.083.167.125.333.083.5s-.208.042-.458.083H43.5c-.667 0-1.125-.041-1.417-.458-.875-1.75-1.791-3.458-2.666-5.208a168 168 0 0 0-2.834-5.25c-1-1.792-2-3.584-3-5.417H33.5c-.875 1.792-1.833 3.583-2.792 5.375s-1.916 3.583-2.833 5.333c-.958 1.75-1.917 3.542-2.875 5.25-.167.417-.5.459-.958.459h-9.167c-.167 0-.292.083-.292-.125a.58.58 0 0 1 .084-.459l12.958-21.25L15 26.583c-.125-.166-.167-.333-.083-.416.083-.125.25-.167.416-.167h9.459c.208 0 .416.042.583.083.167.084.292.209.417.375.791 1.792 1.708 3.584 2.666 5.375 1 1.792 1.959 3.542 3 5.292 1 1.75 1.917 3.5 2.792 5.292h.083a162 162 0 0 1 2.709-5.375c.916-1.75 1.875-3.5 2.833-5.25s1.875-3.542 2.792-5.25c.041-.167.125-.334.25-.417a.8.8 0 0 1 .541-.083h8.792a.384.384 0 0 1 .458.291c.042.042-.041.209-.125.292m19.25 43.958c-3.083.042-6.166-.583-8.958-1.875-2.625-1.208-4.792-3.208-6.292-5.666-1.541-2.542-2.291-5.709-2.291-9.5a17.1 17.1 0 0 1 2.291-8.792 17.3 17.3 0 0 1 6.625-6.458c2.917-1.625 6.417-2.417 10.542-2.417.208 0 .5 0 .875.042.375.041.792.041 1.292.083V22.833c0-.291.125-.458.416-.458h8.459c.208-.042.375.125.416.292v39.75c0 .75.042 1.583.084 2.5.083.874.125 1.708.166 2.416 0 .292-.125.542-.416.667a31.8 31.8 0 0 1-6.792 2c-2.125.375-4.25.583-6.417.583m4.084-8.333V43.917c-.375-.084-.75-.167-1.125-.209a15 15 0 0 0-1.375-.083c-1.625 0-3.25.333-4.709 1.083a9.34 9.34 0 0 0-3.541 3.084c-.917 1.333-1.375 3.125-1.375 5.291a11.6 11.6 0 0 0 .708 4.292 8.1 8.1 0 0 0 1.875 2.958A7.2 7.2 0 0 0 69.208 62c1.125.375 2.292.541 3.459.541.625 0 1.208-.041 1.75-.083.541.042 1-.041 1.5-.208" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'> XD</h1>
+ </div>
 );
 
 export const ReactIcon = () => (
-  <div className='bg-[#000000]  p-4 rounded-xl flex items-center  border'>
-    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+    <div className=' p-4 rounded-xl flex items-center  border '>
+    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 101 100">
       <path fill="#61DAFB" d="M50.307 58.816a8.816 8.816 0 1 0 0-17.632 8.816 8.816 0 0 0 0 17.632" />
       <path stroke="#61DAFB" strokeWidth="5" d="M50.307 68.063c26.126 0 47.306-8.087 47.306-18.063s-21.18-18.062-47.306-18.062C24.18 31.938 3 40.024 3 50s21.18 18.063 47.307 18.063Z" />
       <path stroke="#61DAFB" strokeWidth="5" d="M34.664 59.031C47.727 81.658 65.321 95.957 73.96 90.97c8.64-4.988 5.053-27.374-8.01-50C52.885 18.342 35.291 4.043 26.652 9.03s-5.052 27.374 8.011 50Z" />
       <path stroke="#61DAFB" strokeWidth="5" d="M34.664 40.969c-13.063 22.626-16.65 45.012-8.01 50 8.638 4.988 26.232-9.311 39.295-31.938s16.65-45.012 8.01-50c-8.638-4.988-26.232 9.311-39.295 31.938Z" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>React</h1>
+  </div>
 );
 
 export const NodeIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#8CC84B" d="M46.279 1.067c2.479-1.42 5.709-1.426 8.186 0 12.464 7.042 24.931 14.074 37.393 21.12 2.343 1.321 3.911 3.93 3.887 6.63v42.371c.018 2.813-1.705 5.483-4.178 6.774-12.422 7.004-24.838 14.016-37.259 21.02-2.53 1.447-5.825 1.335-8.277-.23-3.724-2.16-7.455-4.308-11.18-6.465-.76-.453-1.619-.815-2.156-1.552.475-.64 1.324-.72 2.015-1 1.554-.495 2.982-1.288 4.41-2.058.361-.247.802-.152 1.148.069 3.185 1.826 6.342 3.705 9.537 5.513.682.394 1.372-.129 1.955-.453 12.19-6.89 24.396-13.754 36.584-20.646a1.21 1.21 0 0 0 .664-1.191c.009-13.977.002-27.957.005-41.934a1.31 1.31 0 0 0-.781-1.308C75.852 20.756 63.479 13.773 51.102 6.8a1.29 1.29 0 0 0-1.458-.002c-12.378 6.975-24.749 13.964-37.126 20.935-.506.23-.845.738-.785 1.302q.002 20.966 0 41.936a1.19 1.19 0 0 0 .673 1.176c3.303 1.873 6.61 3.733 9.916 5.6 1.861 1.002 4.148 1.597 6.199.83 1.81-.65 3.08-2.497 3.045-4.42.017-13.895-.009-27.793.013-41.686-.046-.617.54-1.127 1.14-1.069 1.586-.01 3.175-.021 4.762.005.663-.015 1.119.649 1.037 1.27-.007 13.984.017 27.968-.01 41.952.003 3.726-1.528 7.781-4.975 9.605-4.247 2.2-9.496 1.733-13.691-.376-3.632-1.813-7.098-3.952-10.666-5.894C6.697 76.68 4.983 73.999 5 71.189V28.817c-.026-2.756 1.604-5.412 4.021-6.713Q27.651 11.588 46.28 1.067" />
       <path fill="#8CC84B" d="M57.114 30.417c5.417-.348 11.216-.206 16.091 2.462 3.774 2.046 5.867 6.338 5.933 10.53-.105.566-.696.878-1.236.84-1.572-.003-3.144.02-4.716-.011-.667.025-1.054-.59-1.138-1.179-.451-2.006-1.545-3.993-3.434-4.96-2.898-1.452-6.26-1.38-9.42-1.349-2.308.123-4.79.322-6.744 1.68-1.5 1.027-1.957 3.102-1.421 4.773.505 1.2 1.89 1.587 3.023 1.944 6.529 1.708 13.447 1.538 19.85 3.785 2.651.916 5.245 2.697 6.152 5.472 1.187 3.72.667 8.168-1.98 11.154-2.146 2.458-5.273 3.796-8.39 4.522-4.149.925-8.454.949-12.666.538-3.962-.451-8.084-1.492-11.142-4.191-2.614-2.27-3.892-5.808-3.765-9.223.03-.576.605-.978 1.157-.93 1.583-.014 3.165-.018 4.748.001.632-.045 1.101.501 1.133 1.097.292 1.912 1.01 3.918 2.678 5.051 3.216 2.075 7.253 1.933 10.936 1.991 3.052-.135 6.477-.176 8.967-2.193 1.314-1.15 1.703-3.075 1.348-4.73-.384-1.398-1.847-2.05-3.103-2.476-6.444-2.038-13.44-1.299-19.822-3.604-2.59-.916-5.096-2.647-6.092-5.309-1.389-3.767-.752-8.427 2.172-11.313 2.852-2.87 6.968-3.976 10.881-4.372" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Node Js</h1>
+
+  </div>
 );
 
 export const TailwindIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+    <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#06B6D4" d="M50 20q-20 0-25 19.994 7.5-9.997 17.5-7.498c3.804.95 6.522 3.71 9.532 6.764 4.902 4.974 10.576 10.731 22.969 10.731q20 0 24.999-19.995-7.5 9.997-17.5 7.5c-3.803-.951-6.521-3.71-9.531-6.765C68.067 25.758 62.392 20 50 20M25 49.991q-20 0-25 19.995 7.5-9.998 17.5-7.498c3.803.952 6.522 3.71 9.532 6.763C31.933 74.225 37.608 79.984 50 79.984q20 0 25-19.995-7.5 9.997-17.5 7.498c-3.803-.95-6.522-3.71-9.532-6.763C43.066 55.75 37.393 49.991 25 49.991" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Tailwind</h1>
   </div>
 );
 
 export const MongoDBIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="url(#a)" d="M49.64 0C24.254 0 25.839 11.009 25.839 11.009l.028 11.406h24.225v3.424H16.245S0 23.997 0 49.61c0 25.615 14.179 24.707 14.179 24.707h8.462V62.432s-.457-14.18 13.952-14.18H60.62s13.5.219 13.5-13.046V13.273S76.17 0 49.64 0M36.282 7.67a4.354 4.354 0 0 1 4.358 4.358 4.356 4.356 0 0 1-6.027 4.028 4.35 4.35 0 0 1-2.69-4.028 4.355 4.355 0 0 1 4.359-4.358" />
       <path fill="url(#b)" d="M50.36 99.48c25.387 0 23.802-11.009 23.802-11.009l-.028-11.405H49.908V73.64h33.847S100 75.485 100 49.869c0-25.615-14.179-24.706-14.179-24.706H77.36v11.886s.457 14.179-13.952 14.179H39.38s-13.5-.218-13.5 13.047v21.933S23.83 99.48 50.36 99.48m13.359-7.67a4.355 4.355 0 0 1-4.028-6.026 4.35 4.35 0 0 1 4.028-2.69 4.355 4.355 0 0 1 4.027 6.027 4.355 4.355 0 0 1-4.027 2.69" />
       <defs>
@@ -68,126 +86,173 @@ export const MongoDBIcon = () => (
       </defs>
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Python</h1>
+
+  </div>
 );
 
 export const PHPIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border gap-2'>
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+
+  <div className=' p-4 rounded-xl flex items-center justify-center border gap-2 '>
+    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#2BA977" d="M46.206 0h16.342v74.898c-8.37 1.583-14.533 2.206-21.2 2.206C21.39 77.084 11 68.167 11 51.042c0-16.5 11.02-27.209 28.098-27.209 2.65 0 4.669.209 7.108.834zm.573 38.164c-1.914-.625-3.491-.833-5.51-.833-8.265 0-13.04 5.041-13.04 13.877 0 8.602 4.565 13.352 12.935 13.352 1.808 0 3.28-.102 5.615-.415z" />
       <path fill="#2BA977" d="M89.27 25.844v37.5c0 12.915-.967 19.125-3.806 24.48-2.65 5.147-6.141 8.393-13.355 11.979l-15.163-7.146c7.213-3.352 10.704-6.315 12.934-10.835 2.334-4.623 3.07-9.978 3.07-24.061V25.844zM71.304 0h16.342v16.604H71.303z" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Django</h1>
+  
+  </div>
 );
 
 export const JavaScriptIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+
+  <div className='p-4 rounded-xl flex items-center justify-center border'>
+    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#017ACB" d="M0 0h100v100H0z" />
       <path fill="#fff" d="M48.016 37.031h4.797v8.282h-12.97v36.843l-.343.094c-.469.125-6.64.125-7.969-.016l-1.062-.093V45.312H17.5v-8.28l4.11-.048c2.25-.03 8.03-.03 12.843 0 4.813.032 10.906.047 13.563.047m36.61 41.219c-1.907 2.016-3.954 3.14-7.36 4.063-1.485.406-1.735.421-5.078.406-3.344-.016-3.61-.016-5.235-.438-4.203-1.078-7.594-3.187-9.906-6.172-.656-.843-1.734-2.593-1.734-2.812 0-.063.156-.203.359-.297s.625-.36.969-.562c.343-.204.968-.579 1.39-.797.422-.22 1.64-.938 2.703-1.579 1.063-.64 2.032-1.156 2.141-1.156.11 0 .313.219.469.485.937 1.578 3.125 3.593 4.672 4.28.953.407 3.062.86 4.078.86.937 0 2.656-.406 3.578-.828.984-.453 1.484-.906 2.078-1.812.406-.641.453-.813.438-2.032 0-1.125-.063-1.437-.375-1.953-.875-1.437-2.063-2.187-6.875-4.312-4.97-2.203-7.204-3.516-9.016-5.282-1.344-1.312-1.61-1.67-2.453-3.312-1.094-2.11-1.235-2.797-1.25-5.937-.016-2.204.031-2.922.265-3.672.329-1.125 1.391-3.297 1.875-3.844 1-1.172 1.36-1.531 2.063-2.11 2.125-1.75 5.438-2.906 8.61-3.015.359 0 1.546.062 2.656.14 3.187.266 5.359 1.047 7.453 2.72 1.578 1.25 3.968 4.187 3.734 4.577-.156.235-6.39 4.391-6.797 4.516-.25.078-.422-.016-.765-.422-2.125-2.547-2.985-3.094-5.047-3.219-1.469-.093-2.25.078-3.235.735-1.03.687-1.53 1.734-1.53 3.187.015 2.125.827 3.125 3.827 4.61 1.938.953 3.594 1.734 3.719 1.734.188 0 4.203 2 5.25 2.625 4.875 2.86 6.86 5.797 7.375 10.86.375 3.812-.703 7.296-3.047 9.765" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Typescript</h1>
+
+  </div>
 );
 
 export const TypeScriptIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100">
       <path fill="#00749A" d="M7.107 49.999c0 16.979 9.867 31.65 24.175 38.604L10.82 32.543a42.7 42.7 0 0 0-3.714 17.456m71.85-2.165c0-5.3-1.904-8.972-3.538-11.83-2.174-3.533-4.211-6.525-4.211-10.058 0-3.943 2.99-7.613 7.202-7.613.19 0 .37.024.556.034C71.333 11.376 61.166 7.107 50 7.107c-14.985 0-28.17 7.689-35.839 19.334 1.007.03 1.956.05 2.76.05 4.487 0 11.432-.544 11.432-.544 2.312-.136 2.585 3.26.276 3.533 0 0-2.325.273-4.91.409l15.62 46.46 9.387-28.152-6.683-18.309c-2.31-.135-4.498-.409-4.498-.409-2.312-.135-2.04-3.67.27-3.533 0 0 7.084.544 11.299.544 4.486 0 11.431-.544 11.431-.544 2.314-.136 2.586 3.26.275 3.533 0 0-2.328.274-4.909.41l15.5 46.108L75.69 61.7c1.856-5.933 3.267-10.194 3.267-13.866" />
       <path fill="#00749A" d="m50.753 53.75-12.87 37.396a42.9 42.9 0 0 0 12.118 1.748 42.9 42.9 0 0 0 14.243-2.43 3.6 3.6 0 0 1-.305-.592zm36.885-24.33c.184 1.366.288 2.834.288 4.41 0 4.353-.812 9.246-3.261 15.364L71.563 87.075C84.315 79.64 92.893 65.824 92.893 50a42.66 42.66 0 0 0-5.255-20.58" />
       <path fill="#00749A" d="M50 0C22.43 0 0 22.43 0 49.999 0 77.57 22.43 100 50 100s50.003-22.429 50.003-50.002C100.003 22.429 77.569 0 50.001 0m0 97.708c-26.305 0-47.707-21.402-47.707-47.71C2.293 23.695 23.694 2.294 50 2.294c26.304 0 47.705 21.401 47.705 47.706 0 26.307-21.402 47.71-47.705 47.71" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Wordpress</h1>
+
+  </div>
 );
 
 export const NextJSIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#4353ff" d="M.994.994v126.012h126.012V.994H.994zm71.92 41.715s3.988 30.056 3.988 31.443l5.785-18.12h-.04c2.552-6.86 7.579-13.323 17.152-13.323l-13.563 32.75a18.428 18.318 0 01-17.549 12.809s-3.99-28.153-3.99-28.788l-5.982 15.465c-2.673 6.86-7.857 13.323-17.43 13.323l-7.5-45.518a14.918 14.829 0 0114.479 13.44s.998 16.693.998 18.001l7.06-18.16c2.553-6.86 7.418-13.322 16.592-13.322z" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Webflow</h1>
+
   </div>
 );
 
 export const VueIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+     <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path d="M0 8.934l49.854.158 14.167 24.47 14.432-24.47L128 8.935l-63.834 110.14zm126.98.637l-24.36.02-38.476 66.053L25.691 9.592.942 9.572l63.211 107.89zm-25.149-.008l-22.745.168-15.053 24.647L49.216 9.73l-22.794-.168 37.731 64.476zm-75.834-.17l23.002.009m-23.002-.01l23.002.01" fill="none" />
       <path d="M25.997 9.393l23.002.009L64.035 34.36 79.018 9.404 102 9.398 64.15 75.053z" fill="#35495e" />
       <path d="M.91 9.569l25.067-.172 38.15 65.659L101.98 9.401l25.11.026-62.966 108.06z" fill="#41b883" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Vuo</h1>
+
+  </div>
 );
 
 export const LaravelIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#83CD29" d="M112.771 30.334L68.674 4.729c-2.781-1.584-6.402-1.584-9.205 0L14.901 30.334C12.031 31.985 10 35.088 10 38.407v51.142c0 3.319 2.084 6.423 4.954 8.083l11.775 6.688c5.628 2.772 7.617 2.772 10.178 2.772 8.333 0 13.093-5.039 13.093-13.828v-50.49c0-.713-.371-1.774-1.071-1.774h-5.623C42.594 41 41 42.061 41 42.773v50.49c0 3.896-3.524 7.773-10.11 4.48L18.723 90.73c-.424-.23-.723-.693-.723-1.181V38.407c0-.482.555-.966.982-1.213l44.424-25.561c.415-.235 1.025-.235 1.439 0l43.882 25.555c.42.253.272.722.272 1.219v51.142c0 .488.183.963-.232 1.198l-44.086 25.576c-.378.227-.847.227-1.261 0l-11.307-6.749c-.341-.198-.746-.269-1.073-.086-3.146 1.783-3.726 2.02-6.677 3.043-.726.253-1.797.692.41 1.929l14.798 8.754a9.294 9.294 0 004.647 1.246c1.642 0 3.25-.426 4.667-1.246l43.885-25.582c2.87-1.672 4.23-4.764 4.23-8.083V38.407c0-3.319-1.36-6.414-4.229-8.073zM77.91 81.445c-11.726 0-14.309-3.235-15.17-9.066-.1-.628-.633-1.379-1.272-1.379h-5.731c-.709 0-1.279.86-1.279 1.566 0 7.466 4.059 16.512 23.453 16.512 14.039 0 22.088-5.455 22.088-15.109 0-9.572-6.467-12.084-20.082-13.886-13.762-1.819-15.16-2.738-15.16-5.962 0-2.658 1.184-6.203 11.374-6.203 9.105 0 12.461 1.954 13.842 8.091.118.577.645.991 1.24.991h5.754c.354 0 .692-.143.94-.396.24-.272.367-.613.335-.979-.891-10.568-7.912-15.493-22.112-15.493-12.631 0-20.166 5.334-20.166 14.275 0 9.698 7.497 12.378 19.622 13.577 14.505 1.422 15.633 3.542 15.633 6.395 0 4.955-3.978 7.066-13.309 7.066z" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Laravel</h1>
+
   </div>
 );
 
 export const MuiIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className='p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#1FA6CA" d="M.2 68.6V13.4L48 41v18.4L16.1 41v36.8L.2 68.6z" />
       <path fill="#1C7FB6" d="M48 41l47.9-27.6v55.3L64 87l-16-9.2 32-18.4V41L48 59.4V41z" /><path fill="#1FA6CA" d="M48 77.8v18.4l32 18.4V96.2L48 77.8z" />
       <path fill="#1C7FB6" d="M80 114.6L127.8 87V50.2l-16 9.2v18.4L80 96.2v18.4zM111.9 41V22.6l16-9.2v18.4l-16 9.2z" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>MUI Icon</h1>
+  </div>
 )
 
 export const ReduxIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#764abc" d="M88.69 88.11c-9 18.4-24.76 30.78-45.61 34.85a39.73 39.73 0 0 1-9.77 1.14c-12 0-23-5-28.34-13.19C-2.2 100-4.64 76.87 19 59.76c.48 2.61 1.46 6.19 2.11 8.31A38.24 38.24 0 0 0 10 81.1c-4.4 8.64-3.91 17.27 1.3 25.25 3.6 5.38 9.3 8.65 16.63 9.65a44 44 0 0 0 26.55-5c12.71-6.68 21.18-14.66 26.72-25.57a9.32 9.32 0 0 1-2.61-6A9.12 9.12 0 0 1 87.37 70h.34a9.15 9.15 0 0 1 1 18.25zm28.67-20.2c12.21 13.84 12.54 30.13 7.82 39.58-4.4 8.63-16 17.27-31.6 17.27a50.48 50.48 0 0 1-21-5.05c2.29-1.63 5.54-4.24 7.33-5.87a41.54 41.54 0 0 0 16 3.42c10.1 0 17.75-4.72 22.31-13.35 2.93-5.7 3.1-12.38.33-19.22a43.61 43.61 0 0 0-17.27-20.85 62 62 0 0 0-34.74-10.59h-2.93a9.21 9.21 0 0 1-8 5.54h-.31a9.13 9.13 0 0 1-.3-18.25h.33a9 9 0 0 1 8 4.89h2.61c20.8 0 39.06 7.98 51.42 22.48zm-82.75 23a7.31 7.31 0 0 1 1.14-4.73c-9.12-15.8-14-35.83-6.51-56.68C34.61 13.83 48.13 3.24 62.79 3.24c15.64 0 31.93 13.69 33.88 40.07-2.44-.81-6-2-8.14-2.44-.53-8.63-7.82-30.13-25.09-29.81-6.19.17-15.31 3.1-20 9.12a43.69 43.69 0 0 0-9.64 25.25 59.61 59.61 0 0 0 8.47 36.16 2.75 2.75 0 0 1 1.14-.16h.32a9.121 9.121 0 0 1 .33 18.24h-.33a9.16 9.16 0 0 1-9.12-8.79z" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Redux</h1>
+
   </div>
 )
 
 export const AndroidIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#fff" d="M21.012 91.125c-5.538.003-10.038-4.503-10.039-10.04l-.002-30.739c-.002-5.532 4.497-10.037 10.028-10.038 2.689-.002 5.207 1.041 7.105 2.937s2.942 4.418 2.944 7.099l-.003 30.74a9.924 9.924 0 01-2.931 7.094 9.962 9.962 0 01-7.102 2.947m-.008-48.12c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736a7.347 7.347 0 007.341 7.348 7.338 7.338 0 007.339-7.347V50.342a7.345 7.345 0 00-7.346-7.337" />
       <path fill="#fff" d="M99.742 44.527l-2.698-.001-66.119.009-2.699.001-.002-2.699c-.006-11.08 6.03-21.385 15.917-27.473l-3.844-7.017c-.47-.822-.588-1.863-.314-2.815a3.732 3.732 0 011.814-2.239 3.605 3.605 0 011.759-.447c1.362 0 2.609.739 3.267 1.933l4.023 7.329a37.842 37.842 0 0113.099-2.305c4.606-.002 9.023.777 13.204 2.311l4.017-7.341a3.711 3.711 0 013.263-1.932 3.712 3.712 0 011.761.438A3.706 3.706 0 0188 4.524a3.69 3.69 0 01-.318 2.832l-3.842 7.013c9.871 6.101 15.9 16.398 15.899 27.459l.003 2.699zM80.196 15.403l5.123-9.355a1.019 1.019 0 10-1.783-.981l-5.176 9.45c-4.354-1.934-9.229-3.021-14.382-3.016-5.142-.005-10.008 1.078-14.349 3.005l-5.181-9.429a1.009 1.009 0 00-1.379-.405c-.497.266-.68.891-.403 1.379l5.125 9.348c-10.07 5.194-16.874 15.084-16.868 26.439l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427M48.94 29.86a2.772 2.772 0 01.003-5.545 2.78 2.78 0 012.775 2.774 2.775 2.775 0 01-2.778 2.771m30.107-.006a2.767 2.767 0 01-2.772-2.771 2.788 2.788 0 012.773-2.778 2.79 2.79 0 012.767 2.779 2.769 2.769 0 01-2.768 2.77m-27.336 96.305c-5.533-.001-10.036-4.501-10.037-10.038l-.002-13.567-2.638.003a10.453 10.453 0 01-7.448-3.082 10.437 10.437 0 01-3.083-7.452l-.01-47.627v-2.701h2.699l65.623-.01 2.7-.002v2.699l.007 47.633c.001 5.809-4.725 10.536-10.532 10.535l-2.654.002.003 13.562c0 5.534-4.502 10.039-10.033 10.039a9.933 9.933 0 01-7.098-2.937 9.952 9.952 0 01-2.947-7.096v-13.568H61.75v13.565c-.002 5.535-4.503 10.043-10.039 10.042" />
       <path fill="#fff" d="M31.205 92.022a7.82 7.82 0 007.831 7.837h5.333l.006 16.264c-.001 4.05 3.289 7.341 7.335 7.342a7.342 7.342 0 007.338-7.348l.001-16.259 9.909-.003-.001 16.263c.004 4.051 3.298 7.346 7.343 7.338 4.056.003 7.344-3.292 7.343-7.344l-.005-16.259 5.353-.001c4.319.001 7.832-3.508 7.832-7.837l-.009-47.635-65.621.012.012 47.63zm75.791-.91c-5.536.001-10.039-4.498-10.038-10.036l-.008-30.738c.002-5.537 4.498-10.041 10.031-10.041 5.54-.001 10.046 4.502 10.045 10.038l.003 30.736c.001 5.534-4.498 10.042-10.033 10.041m-.01-48.116c-4.053-.004-7.337 3.287-7.337 7.342l.003 30.737a7.336 7.336 0 007.342 7.34 7.338 7.338 0 007.338-7.343l-.008-30.736a7.335 7.335 0 00-7.338-7.34" />
       <path fill="#A4C439" d="M21.004 43.005c-4.053-.002-7.338 3.291-7.339 7.341l.005 30.736a7.338 7.338 0 007.342 7.343 7.33 7.33 0 007.338-7.342V50.342a7.345 7.345 0 00-7.346-7.337m59.192-27.602l5.123-9.355a1.023 1.023 0 00-.401-1.388 1.022 1.022 0 00-1.382.407l-5.175 9.453c-4.354-1.938-9.227-3.024-14.383-3.019-5.142-.005-10.013 1.078-14.349 3.005l-5.181-9.429a1.01 1.01 0 00-1.378-.406 1.007 1.007 0 00-.404 1.38l5.125 9.349c-10.07 5.193-16.874 15.083-16.868 26.438l66.118-.008c.003-11.351-6.789-21.221-16.845-26.427M48.94 29.86a2.772 2.772 0 01.003-5.545 2.78 2.78 0 012.775 2.774 2.775 2.775 0 01-2.778 2.771m30.107-.006a2.77 2.77 0 01-2.772-2.771 2.793 2.793 0 012.773-2.778 2.79 2.79 0 012.767 2.779 2.767 2.767 0 01-2.768 2.77M31.193 44.392l.011 47.635a7.822 7.822 0 007.832 7.831l5.333.002.006 16.264c-.001 4.05 3.291 7.342 7.335 7.342 4.056 0 7.342-3.295 7.343-7.347l-.004-16.26 9.909-.003.004 16.263c0 4.047 3.293 7.346 7.338 7.338 4.056.003 7.344-3.292 7.343-7.344l-.005-16.259 5.352-.004a7.835 7.835 0 007.836-7.834l-.009-47.635-65.624.011zm83.134 5.943a7.338 7.338 0 00-7.341-7.339c-4.053-.004-7.337 3.287-7.337 7.342l.006 30.738a7.334 7.334 0 007.339 7.339 7.337 7.337 0 007.338-7.343l-.005-30.737z" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Android</h1>
+
+  </div>
 )
 
 export const FlutterIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
 
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+  <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A64.249 64.249 0 0064.205-.026C28.984-.026 0 28.982 0 64.242a64.316 64.316 0 0019.945 46.562l2.368 2.1a64.22 64.22 0 0041.358 15.122c33.487 0 61.637-26.24 64.021-59.683 1.751-16.371-3.051-37.077-11.24-61.7zM29.067 111.17a5.5 5.5 0 01-4.269 2.034c-3.018 0-5.487-2.484-5.487-5.502 0-3.017 2.485-5.501 5.487-5.501 1.25 0 2.485.433 3.452 1.234 2.351 1.9 2.718 5.384.817 7.735zm87.119-19.238c-15.843 21.122-49.68 14.003-71.376 15.02 0 0-3.852.234-7.721.867 0 0 1.45-.617 3.335-1.334 15.226-5.301 22.43-6.335 31.685-11.086 17.427-8.869 34.654-28.274 38.24-48.463-6.637 19.422-26.75 36.11-45.077 42.895-12.557 4.635-35.238 9.136-35.238 9.136l-.917-.484c-15.442-7.518-15.91-40.977 12.157-51.78 12.291-4.735 24.048-2.134 37.323-5.302 14.175-3.367 30.568-14.004 37.238-27.874 7.471 22.19 16.46 56.932.35 78.405z" fill="#77bc1f" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Flutter</h1>
+
   </div>
 )
 
 export const DartIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#2A0634" d="M0 0h128v128H0z" />
       <path fill="#E976B9" d="M0 0v128h128V0H0zm123 123H5V5h118v118z" />
       <path fill="#E976B9" d="M69 47.1c-.1-9.4-7.8-16.9-17.2-16.8H33.3v58.5h9.6V67.5h8.3C61 67.4 69 59.3 69 49.4v-2.3zm-9.6 3c0 5-4.1 9.1-9.1 9.1h-7.4V38.5h7.4c5 0 9.1 4.1 9.1 9.1v2.5zM77.1 88.8V48.9s10.2-5.1 20.2-3.8v8.3s-7 0-10.1 1.3v34.2H77.1z" />
     </svg>
   </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Dart</h1>
+  </div>
 )
 
 export const KotlinIcon = () => (
-  <div className='bg-[#0f172a] p-4 rounded-xl flex items-center justify-center border'>
-
-    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex-shrink-0 border border-gray-600 rounded-full  p-10' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <div className='flex flex-col items-center justify-center gap-2 tech-icon-container'>
+  <div className=' p-4 rounded-xl flex items-center justify-center border'>
+    <svg className='w-8 h-8 sm:w-10 sm:h-10 md:w-8 md:h-8 flex-shrink-0 border border-gray-600 rounded-full  p-2' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
       <path fill="#7f54b3" d="M116.3 89.1H11.7C5.2 89.1 0 83.9 0 77.4v-40C0 31 5.2 25.8 11.7 25.8h104.7c6.4 0 11.7 5.2 11.7 11.7v40c-.1 6.4-5.3 11.6-11.8 11.6z" />
       <path fill="#FFF" d="M13.8 76.7s2.8 11.8 8.5 3.9 11.2-20.3 11.2-20.3.4-3.1 2 3.7S44 80 44 80s6.3 7.9 8.9-.4c-1-11 2.8-31 6.7-40.6 1.6-8.5-7.3-6.1-8.1-4.1s-6.3 14.8-6.7 28.2c0 0-4.7-12.8-5.1-17.4-.4-4.7-5.3-5.9-8.1-1.4S20.3 66.2 20.3 66.2l-5.5-28.4s-5.5-7.3-8.7 1.6c0 0 5.7 34.9 7.7 37.3zM87 45.7c-8.5-14.2-21.1-3.4-21.1-3.4s-9.6 11.1-5.3 26.2c6.9 14.9 16.6 8.3 19.2 7.1 2.7-1.3 14.1-14.3 7.2-29.9zm-6.5 12.5c0 5.9-4.9 11.4-8.9 10.2-2.2-1.3-3.6-4.8-3.6-10.8 2-9.7 6.4-11 8.7-10.8 4.3 2.3 4.1 7.4 3.8 11.4zM118.9 45.7c-8.5-14.2-21.1-3.4-21.1-3.4s-9.6 11.1-5.3 26.2c6.9 14.9 16.6 8.3 19.2 7.1 2.6-1.3 14.1-14.3 7.2-29.9zm-6.5 12.5c0 5.9-4.9 11.4-8.9 10.2-2.2-1.3-3.6-4.8-3.6-10.8 2-9.7 6.4-11 8.7-10.8 4.2 2.3 4 7.4 3.8 11.4z" />
       <path fill="#7f54b3" d="M61.3 89.1l22.3 13.1-4.7-13.1-12.8-3.6z" />
     </svg>
+  </div>
+  <h1 className='text-sm font-medium text-foreground tech-icon-text'>Kotlin</h1>
   </div>
 )
 // Array of all tech icons for easy mapping

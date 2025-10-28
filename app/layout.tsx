@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/component/ThemeProvider";
-import ClientLayout from "../component/ClientLayout";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import ClientLayout from "../components/ClientLayout";
 
 const roboto = Roboto({
   variable: "--font-roboto",
