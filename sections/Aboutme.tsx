@@ -23,10 +23,10 @@ const About = () => {
         "Mentoring & Coaching Developers"
     ];
     return (
-        <div className='min-h-screen container mx-auto flex items-center justify-evenly'>
+        <div className='min-h-screen container mx-auto flex items-center justify-evenly h-screen'>
             <Image src={"https://www.shajeelafzal.com/_next/image?url=%2Fprofile-image.jpg&w=640&q=75"}
                 alt='profile' height={600} width={500}
-                className='rounded-md shadow-sm h-full'
+                className='rounded-md shadow-sm h-it'
             />
             <div className='flex flex-col gap-6 max-w-[600px]'>
                 <h1 className='text-[36px] font-semibold'>Hi, I'm Ahmad Bashir - <span className='animated-gradient-text-2'>Designer and Developer</span></h1>

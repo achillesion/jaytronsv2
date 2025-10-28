@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <div className="bg-background text-foreground transition-colors duration-300 relative">
       <div className="z-10 text-center px-4 max-w-full m-auto  flex items-center flex-col justify-center relative isolate min-h-screen mt-40">
-        <div className="inline-block mb-20 py-1 px-4 rounded-full  text-muted-foreground text-sm border border-border animate-fade-in">
+        <div className="inline-block mb-10 py-1 px-4 rounded-full  text-muted-foreground text-sm border border-border animate-fade-in">
           Available for New Opportunities
         </div>
 
-        <h1 className="text-5xl md:text-[80px] font-regular mb-6 animate-slide-up relative z-10">
+        <h1 className="text-5xl md:text-[80px] font-regular mb-4 animate-slide-up relative z-10">
           <span className="text-foreground">Full-Stack </span>
           <span className="animated-gradient-text">Developer</span>
           <br />
@@ -18,7 +18,7 @@ const Hero = () => {
           <span className="animated-gradient-text-2"> Content Creator</span>
         </h1>
 
-        <p className="text-lg md:text-[18px] text-muted-foreground mb-8 animate-fade-in mt-5">
+        <p className="text-lg md:text-[18px] text-muted-foreground  animate-fade-in mt-5">
           I build performant web & mobile apps and create developer
           <br />content—practical tutorials, articles, and open-source.
         </p>

@@ -85,7 +85,7 @@ const LaptopCarousal = () => {
       {/* Laptop Frame */}
       <div 
         className="relative mx-auto" 
-        style={{ width: '900px', height: '600px' }}
+        style={{ width: '900px', height: '550px' }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
