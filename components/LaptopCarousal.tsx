@@ -5,12 +5,12 @@ import { FaArrowRight } from 'react-icons/fa'
 
 const LaptopCarousal = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
-  
+
   // Sample images - replace with your actual images
   const images = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/8d0ec8195128753.66081f88aeb46.jpg",
       alt: "Project 1",
       title: "E-commerce Platform",
       description: "Modern e-commerce solution with advanced features",
@@ -19,7 +19,7 @@ const LaptopCarousal = () => {
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/be2fb9198116587.663bb5bf270db.jpg",
       alt: "Project 2",
       title: "Dashboard Design",
       description: "Analytics dashboard with real-time data visualization",
@@ -28,7 +28,7 @@ const LaptopCarousal = () => {
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47e4f3101376559.5f1daa81bcff9.png",
       alt: "Project 3",
       title: "Analytics Interface",
       description: "Comprehensive analytics platform for business insights",
@@ -37,7 +37,7 @@ const LaptopCarousal = () => {
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/fed65a104152447.5f5f24e0050c0.png",
       alt: "Project 4",
       title: "Mobile App Design",
       description: "Cross-platform mobile application with native performance",
@@ -46,7 +46,7 @@ const LaptopCarousal = () => {
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
+      src: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/5635f9180102375.6504ac013ce15.png",
       alt: "Project 5",
       title: "Portfolio Website",
       description: "Personal portfolio showcasing creative work and skills",
@@ -57,7 +57,7 @@ const LaptopCarousal = () => {
 
   // Auto-slide functionality with pause on hover
   const [isPaused, setIsPaused] = useState(false);
-  
+
   useEffect(() => {
     const timer = isPaused ? null : setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length)
@@ -83,17 +83,17 @@ const LaptopCarousal = () => {
   return (
     <div className="w-full max-w-6xl mx-auto ">
       {/* Laptop Frame */}
-      <div 
-        className="relative mx-auto" 
+      <div
+        className="relative mx-auto"
         style={{ width: '900px', height: '550px' }}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
         {/* Laptop Base */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-8  rounded-b-lg shadow-lg"></div>
-        
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-8  rounded-b-lg"></div>
+
         {/* Laptop Screen */}
-        <div className="relative w-full h-full bg-transparent border rounded-lg shadow-2xl overflow-hidden">
+        <div className="relative w-full h-full bg-transparent border-t border-r border-l rounded-lg  overflow-hidden">
           {/* Screen Bezel */}
           <div className="absolute inset-2 bg-black rounded-md overflow-hidden">
             {/* Screen Content */}
@@ -117,18 +117,18 @@ const LaptopCarousal = () => {
 
               {/* Image Container */}
               <div className="relative w-full h-full overflow-hidden">
-                <div 
+                <div
                   className="laptop-carousel-slider h-full"
-                  style={{ 
+                  style={{
                     transform: `translateX(-${currentSlide * (100 / images.length)}%)`,
                     width: `${images.length * 100}%`
                   }}
                 >
                   {images.map((image, index) => (
-                    <div 
-                      key={image.id} 
+                    <div
+                      key={image.id}
                       className="laptop-carousel-slide relative"
-                      style={{ 
+                      style={{
                         width: `${100 / images.length}%`
                       }}
                     >
@@ -137,26 +137,26 @@ const LaptopCarousal = () => {
                         alt={image.alt}
                         className="w-full h-full object-cover"
                       />
-                    <div className="absolute inset-0 left-0 bg-linear-to-t from-black via-black/60 to-transparent"></div>
-                      <div className="project-overlay ">
-                        <h3 className="text-2xl font-bold mb-2 text-left text-on-hover">{image.title}</h3>
-                        <p className="text-sm opacity-90 mb-2 text-left text-on-hover">{image.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-3 text-on-hover">
-                          {image.technologies.split(', ').map((tech, techIndex) => (
-                            <span 
-                              key={techIndex}
-                              className="px-2 py-1 project-tech-tag rounded-full text-xs font-medium"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      
-                      </div>
+                      <div className="absolute inset-0 left-0 bg-linear-to-t from-[#0a0a0a] via-black/70 to-transparent">
+                        <div className="project-overlay ">
+                          <h3 className="text-2xl font-bold mb-2 text-left text-on-hover">{image.title}</h3>
+                          <p className="text-sm opacity-90 mb-2 text-left text-on-hover">{image.description}</p>
+                          <div className="flex flex-wrap gap-2 mb-3 text-on-hover">
+                            {image.technologies.split(', ').map((tech, techIndex) => (
+                              <span
+                                key={techIndex}
+                                className="px-2 py-1 project-tech-tag rounded-full text-xs font-medium"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
 
+                        </div>
+                      </div>
                       {/* Hover Button */}
                       <div className="hover-button-overlay  flex items-center justify-center opacity-0 bg-black/20">
-                      
+
                         <a
                           href={image.link}
                           target="_blank"
@@ -164,9 +164,9 @@ const LaptopCarousal = () => {
                           className="bg-[#378066] dark:bg-yellow-200 text-white dark:text-black px-3 py-1 rounded-md font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300
                            transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-sm"
                         >
-                          
+
                           View Project
-                          <FaArrowRight className='w-3 h-3 rotate-320'/>
+                          <FaArrowRight className='w-3 h-3 rotate-320' />
                         </a>
                       </div>
                     </div>
@@ -178,12 +178,11 @@ const LaptopCarousal = () => {
           </div>
         </div>
 
-        {/* Laptop Hinge */}
-        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-16 h-2 bg-gray-400 dark:bg-gray-600 rounded-full"></div>
+       
       </div>
 
       {/* Project Counter */}
-     
+
     </div>
   )
 }

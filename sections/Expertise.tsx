@@ -9,7 +9,7 @@ const Expertise = () => {
           <h1 className='text-[64px]'>Expertise Across</h1>
           <h1 className='text-[64px] animated-gradient-text-2'>Modern Technologies</h1>
           <h1 className='text-[64px]'>💻 & Frameworks</h1>
-          <p className='mt-10 max-w-[500px] m-auto'>Building scalable solutions with cutting-edge tools across web, mobile, AI, and cloud technologies</p>
+          <p className='text-lg md:text-[18px] text-muted-foreground  animate-fade-in mt-5 max-w-[400px] text-center m-auto'>Building scalable solutions with cutting-edge tools across web, mobile, AI, and cloud technologies</p>
         </div>
 
         <div className="relative w-full overflow-hidden  sm:mt-8 md:mt-10   max-w-7xl m-auto flex flex-col">

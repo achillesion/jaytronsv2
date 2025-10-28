@@ -4,6 +4,7 @@ import LaptopCarousal from '@/components/LaptopCarousal'
 
 const Hero = () => {
   return (
+    
     <div className="bg-background text-foreground transition-colors duration-300 relative">
       <div className="z-10 text-center px-4 max-w-full m-auto  flex items-center flex-col justify-center relative isolate min-h-screen mt-40">
         <div className="inline-block mb-10 py-1 px-4 rounded-full  text-muted-foreground text-sm border border-border animate-fade-in">
