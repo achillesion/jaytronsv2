@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
 import { FaArrowRight } from 'react-icons/fa'
 
 const LaptopCarousal = () => {
@@ -84,36 +84,39 @@ const LaptopCarousal = () => {
     <div className="w-full max-w-6xl mx-auto ">
       {/* Laptop Frame */}
       <div
-        className="relative mx-auto"
+        className="relative mx-auto main-carousel"
         style={{ width: '900px', height: '550px' }}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
       >
         {/* Laptop Base */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-8  rounded-b-lg"></div>
+
+
+
 
         {/* Laptop Screen */}
         <div className="relative w-full h-full bg-transparent border-t border-r border-l rounded-lg  overflow-hidden">
           {/* Screen Bezel */}
           <div className="absolute inset-2 bg-black rounded-md overflow-hidden">
             {/* Screen Content */}
-            <div className="relative w-full h-full bg-gray-100 dark:bg-gray-900 ">
+            <div className="relative  w-full h-full bg-gray-100 dark:bg-gray-900 ">
               {/* Navigation Arrows */}
-              {/* <button
+
+              <button
                 onClick={prevSlide}
-                className=" absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
+                className="stop-button absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/30   rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="w-6 h-6 text-gray-700 dark:text-gray-300" />
               </button>
-              
+
               <button
                 onClick={nextSlide}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 dark:bg-gray-800/90 hover:bg-white dark:hover:bg-gray-700 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
+                className="stop-button absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/30 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
                 aria-label="Next slide"
               >
                 <ChevronRight className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-              </button> */}
+              </button>
+
 
               {/* Image Container */}
               <div className="relative w-full h-full overflow-hidden">
@@ -127,7 +130,7 @@ const LaptopCarousal = () => {
                   {images.map((image, index) => (
                     <div
                       key={image.id}
-                      className="laptop-carousel-slide relative"
+                      className="laptop-carousel-slide relative hover:scale-100 cursor-pointer"
                       style={{
                         width: `${100 / images.length}%`
                       }}
@@ -139,35 +142,43 @@ const LaptopCarousal = () => {
                       />
                       <div className="absolute inset-0 left-0 bg-linear-to-t from-[#0a0a0a] via-black/70 to-transparent">
                         <div className="project-overlay ">
-                          <h3 className="text-2xl font-bold mb-2 text-left text-on-hover">{image.title}</h3>
-                          <p className="text-sm opacity-90 mb-2 text-left text-on-hover">{image.description}</p>
-                          <div className="flex flex-wrap gap-2 mb-3 text-on-hover">
-                            {image.technologies.split(', ').map((tech, techIndex) => (
-                              <span
-                                key={techIndex}
-                                className="px-2 py-1 project-tech-tag rounded-full text-xs font-medium"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
+                          <h3 className="text-2xl font-bold mb-2 text-left text-on-hover bg-black w-fit p-3">{image.title}</h3>
+                          <p className="text-sm opacity-90 mb-2 text-left text-on-hover bg-black w-fit p-3">{image.description}</p>
+
 
                         </div>
                       </div>
                       {/* Hover Button */}
-                      <div className="hover-button-overlay  flex items-center justify-center opacity-0 bg-black/20">
+                      <div className="hover-button-overlay  flex flex-row items-center justify-center opacity-0 gap-4 ">
 
                         <a
                           href={image.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-[#378066] dark:bg-yellow-200 text-white dark:text-black px-3 py-1 rounded-md font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300
+                          className="bg-yellow-200 text-white dark:text-black px-3 py-2 rounded-md font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300
                            transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-sm"
                         >
 
                           View Project
                           <FaArrowRight className='w-3 h-3 rotate-320' />
                         </a>
+
+                        <button
+                          onClick={() => setIsPaused(!isPaused)}
+                          className="stop-button p-3 bg-black/40 rounded-full"
+                          aria-label="Previous slide"
+                        >
+
+                          <span className="text-sm text-gray-700 dark:text-gray-300">
+                            {isPaused ? <Play className="w-4 h-4 text-gray-700 dark:text-gray-300" /> : <Pause className="w-4 h-4 text-gray-700 dark:text-gray-300" />}
+                          </span>
+                        </button>
+
+
+                      </div>
+                      {/* Project Counter */}
+                      <div className="absolute top-4 left-10 px-2 py-1 text-on-hover rounded-full  transform -translate-x-1/2 text-white bg-black/30 text-sm font-medium">
+                        {currentSlide + 1} / {images.length}
                       </div>
                     </div>
                   ))}
@@ -178,10 +189,9 @@ const LaptopCarousal = () => {
           </div>
         </div>
 
-       
+
       </div>
 
-      {/* Project Counter */}
 
     </div>
   )
