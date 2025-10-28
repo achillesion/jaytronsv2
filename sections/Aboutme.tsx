@@ -23,7 +23,7 @@ const About = () => {
         "Mentoring & Coaching Developers"
     ];
     return (
-        <div className='min-h-screen container mx-auto flex items-center justify-evenly h-screen'>
+        <div className='min-h-screen container mx-auto flex items-center justify-evenly h-screen mt-20'>
             <Image src={"https://www.shajeelafzal.com/_next/image?url=%2Fprofile-image.jpg&w=640&q=75"}
                 alt='profile' height={600} width={500}
                 className='rounded-md shadow-sm h-it'
