@@ -121,7 +121,7 @@ const JobCarousel = ({ job }: JobCarouselProps) => {
 
         <time className="text-sm text-muted-foreground font-medium">
           {`${job.start} - ${job.end}`}
-        </time>
+        </time> 
 
         {/* Infinite Animated Carousel */}
         <div className="relative overflow-hidden w-full mt-4 mb-4">

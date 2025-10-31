@@ -32,9 +32,11 @@ export default function Navbar({
   navItems = [
     { label: "Home", href: "hero" },
     { label: "Portfolio", href: "portfolio", badge: "02" },
+    { label: "About", href: "about" },
+
     {
       label: "Services",
-      href: "/services",
+      href: "services",
       badge: "03",
       dropdownItems: [
         { label: "React", href: "react-development", icon: <FaReact className="text-white" /> },
@@ -45,8 +47,8 @@ export default function Navbar({
       ],
     },
   ],
-  ctaText = "Schedual a Call",
-  ctaHref = "/Whatsapp",
+  ctaText = "Schedule a meeting",
+  calendlyLink = "https://calendly.com/akifbutt935/30min", // ✅ Your Calendly link
   className = "",
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -119,7 +121,7 @@ export default function Navbar({
         {/* Desktop CTA + Theme */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://wa.me/923215236350"
+            href={calendlyLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-[#378066] text-white rounded-lg py-2 px-4 text-sm transition-all duration-300 hover:bg-[#2d6b55]"
@@ -170,9 +172,9 @@ export default function Navbar({
               </button>
             ))}
 
-            {/* Mobile CTA */}
+            {/* Mobile CTA (Calendly) */}
             <a
-              href="https://wa.me/923215236350"
+              href={calendlyLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-[#378066] dark:bg-yellow-200 text-white dark:text-black rounded-lg py-3 font-semibold hover:bg-[#2d6b55] dark:hover:bg-yellow-300 transition-all"

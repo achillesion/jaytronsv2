@@ -2,10 +2,12 @@
 import React from "react";
 import Link from "next/link";
 import LaptopCarousal from "@/components/LaptopCarousal";
-
-const Hero = () => {
+interface SectionProps {
+  id?: string;
+}
+const Hero = ({ id }: SectionProps) => {
   return (
-    <section className="bg-background text-foreground transition-colors duration-300 relative w-full min-h-screen flex flex-col justify-between items-center overflow-hidden">
+    <section id={id} className="bg-background text-foreground transition-colors duration-300 relative w-full min-h-screen flex flex-col justify-between items-center overflow-hidden">
       {/* Content Wrapper */}
       <div className="z-10 text-center px-4 w-full flex flex-col justify-center items-center flex-1 py-16 sm:py-24 md:py-32">
         

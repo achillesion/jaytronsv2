@@ -2,8 +2,10 @@
 import ReviewCard from '@/components/ReviewCard'
 import { DATA } from '@/data/resumee'
 import React, { useEffect, useRef, useState } from 'react'
-
-const Reviews = () => {
+interface SectionProps {
+  id?: string;
+}
+const Reviews = ({id}:SectionProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -24,7 +26,7 @@ const Reviews = () => {
   }, [isPaused]);
 
   return (
-    <div className='m-auto flex items-center flex-col justify-start relative isolate min-h-screen mt-40'>
+    <div  id={id} className='m-auto flex items-center flex-col justify-start relative isolate min-h-screen mt-40'>
         <div className='flex flex-col items-center text-center'>
             <h1 className='text-[48px] font-semibold'>What Clients Say</h1>
             <p className='text-[16px] text-gray-400 max-w-[400px] mb-10'>Don't just take my word for it. Here's what my clients have to say about working with me.</p>

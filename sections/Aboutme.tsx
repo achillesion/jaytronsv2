@@ -2,8 +2,11 @@ import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+interface SectionProps {
+  id?: string;
+}
 
-const About = () => {
+const About = ({ id }: SectionProps) => {
   const skills = [
     "Full-Stack Web Development",
     "AI Integration & Chatbot Development",
@@ -24,7 +27,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen container mx-auto flex flex-col md:flex-row items-center justify-center gap-10 px-4 md:px-8 mt-20 mb-10">
+    <div id={id} className="min-h-screen container mx-auto flex flex-col md:flex-row items-center justify-center gap-10 px-4 md:px-8 mt-20 mb-10">
       {/* Profile Image */}
       <div className="flex justify-center">
         <Image

@@ -57,17 +57,15 @@ const LaptopCarousal = () => {
 
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null;
-    
     if (!isPaused) {
       timer = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % images.length);
       }, 5000);
     }
-
     return () => {
       if (timer) clearInterval(timer);
     };
-  }, [images.length, isPaused]);
+  }, [isPaused, images.length]);
 
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -76,56 +74,50 @@ const LaptopCarousal = () => {
 
   return (
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Laptop Container */}
+      {/* Carousel Container */}
       <div
         className="relative mx-auto rounded-xl overflow-hidden border border-border bg-transparent shadow-md"
-        style={{
-          maxWidth: "100%",
-          aspectRatio: "16/9", // Maintain proportional screen ratio
-        }}
+        style={{ maxWidth: "1200px", height: "600px" }} // fixed height for perfect display
       >
-        {/* Navigation Arrows */}
+        {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/30 rounded-full p-3 shadow-md hover:scale-110 transition-all"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/30 rounded-full p-3 shadow-md hover:scale-110 transition-all"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-6 h-6 text-gray-100" />
+          <ChevronLeft className="w-6 h-6 text-white" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/30 rounded-full p-3 shadow-md hover:scale-110 transition-all"
+          className="absolute right-3 top-1/2 transform -translate-y-1/2 z-10 bg-black/30 rounded-full p-3 shadow-md hover:scale-110 transition-all"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-6 h-6 text-gray-100" />
+          <ChevronRight className="w-6 h-6 text-white" />
         </button>
 
         {/* Slides */}
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="w-full h-full overflow-hidden relative">
           <div
-            className="flex transition-transform duration-700 ease-in-out"
+            className="flex transition-transform duration-700 ease-in-out w-full h-full"
             style={{
               transform: `translateX(-${currentSlide * 100}%)`,
               width: `${images.length * 100}%`,
             }}
           >
-            {images.map((image, index) => (
+            {images.map((image) => (
               <div
                 key={image.id}
                 className="relative flex-shrink-0 w-full h-full"
               >
                 <img
-  src={image.src}
-  alt={image.alt}
-  className="w-full h-full object-cover md:object-cover object-center transition-all duration-500"
-  style={{ objectFit: "cover", objectPosition: "center" }}
-/>
-
-
+                  src={image.src}
+                  alt={image.alt}
+                  className="  w-full h-full object-cover object-center"
+                />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent flex flex-col justify-end p-4 sm:p-6">
                   <h3 className="text-lg sm:text-2xl font-semibold text-white mb-2">
                     {image.title}
                   </h3>
@@ -146,7 +138,7 @@ const LaptopCarousal = () => {
 
                     <button
                       onClick={() => setIsPaused(!isPaused)}
-                      className="p-2 bg-black/40 rounded-full"
+                      className="p-2 bg-black/40 rounded-full hover:bg-black/60 transition-all"
                     >
                       {isPaused ? (
                         <Play className="w-4 h-4 text-white" />

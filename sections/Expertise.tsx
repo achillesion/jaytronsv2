@@ -1,9 +1,11 @@
 import { techIcons } from '@/data/Icons'
 import React from 'react'
-
-const Expertise = () => {
+interface SectionProps {
+  id?: string;
+}
+const Expertise = ({ id }: SectionProps) => {
   return (
-    <div className='bg-forground w-full'>
+    <div  id={id} className='bg-forground w-full'>
       <div className='min-h-screen container mx-auto flex flex-col gap-20  mb-20'>
         <div className='w-full text-center font-medium mt-20'>
           <h1 className='text-[64px]'>Expertise Across</h1>
