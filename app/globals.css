@@ -475,6 +475,32 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes themeRippleSlow {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(8);
+    opacity: 0;
+  }
+}
+
+.animate-themeRippleSlow {
+  position: absolute;
+  top: 0%; /* starts from top */
+  left: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  transform: translate(-50%, 0%) scale(0);
+  border-radius: 9999px;
+  animation: themeRippleSlow 1.5s ease-out forwards; /* slower */
+  z-index: 50;
+}
 
 /* Profile Image Custom Media Queries for Laptop Devices */
 .profile-image {
