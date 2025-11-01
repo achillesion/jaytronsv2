@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ClientLayout from "../components/ClientLayout";
+import  Footer  from "@/components/Fottercomponent/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -29,7 +30,9 @@ export default function RootLayout({
           <ClientLayout>
             {children}
           </ClientLayout>
+        {/* <Footer /> */}
         </ThemeProvider>
+
       </body>
     </html>
   );

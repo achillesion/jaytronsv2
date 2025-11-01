@@ -1,3 +1,5 @@
+import FAQs from "@/components/Faqs";
+import Footer from "@/components/Fottercomponent/Footer";
 import About from "@/sections/Aboutme";
 import CompletedProjects from "@/sections/CompletedProjects";
 import Expertise from "@/sections/Expertise";
@@ -13,6 +15,8 @@ export default function Home() {
       <Expertise id="portfolio" />
       <Hackathon id="work" />
       <Reviews id="reviews" />
+      <FAQs id="faqs" />
+      <Footer />
     </div>
   );
 }

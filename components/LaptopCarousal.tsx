@@ -77,7 +77,7 @@ const LaptopCarousal = () => {
       {/* Carousel Container */}
       <div
         className="relative mx-auto rounded-xl overflow-hidden border border-border bg-transparent shadow-md"
-        style={{ maxWidth: "1200px", height: "600px" }} // fixed height for perfect display
+        style={{ maxWidth: "1200px", height: "600px" }}
       >
         {/* Navigation Buttons */}
         <button
@@ -99,21 +99,18 @@ const LaptopCarousal = () => {
         {/* Slides */}
         <div className="w-full h-full overflow-hidden relative">
           <div
-            className="flex transition-transform duration-700 ease-in-out w-full h-full"
-            style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
-              width: `${images.length * 100}%`,
-            }}
+            className="flex w-full h-full transition-transform duration-[1200ms] ease-[cubic-bezier(0.77,0,0.175,1)]"
+           style={{
+    transform: `translateX(-${currentSlide * 100}%)`,
+  }}
           >
             {images.map((image) => (
-              <div
-                key={image.id}
-                className="relative flex-shrink-0 w-full h-full"
-              >
+              <div key={image.id} className="relative flex-shrink-0 w-full h-full">
+
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="  w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center transition-transform duration-700 ease-in-out"
                 />
 
                 {/* Overlay */}
