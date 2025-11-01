@@ -15,7 +15,7 @@ export default function Home() {
       <Expertise id="portfolio" />
       <Hackathon id="work" />
       <Reviews id="reviews" />
-      <FAQs id="faqs" />
+      <FAQs id="faqs" question={""} answer={""} />
       <Footer />
     </div>
   );

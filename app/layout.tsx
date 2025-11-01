@@ -31,6 +31,7 @@ export default function RootLayout({
             {children}
           </ClientLayout>
         {/* <Footer /> */}
+        {/* <Footer /> */}
         </ThemeProvider>
 
       </body>
