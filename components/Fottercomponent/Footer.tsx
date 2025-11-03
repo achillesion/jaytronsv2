@@ -19,7 +19,6 @@ const Footer = () => {
             Lahore, Dubai & Remote
           </p>
         </div>
-
         {/* Link Sections */}
         <FooterLinks
           title="Main Platforms"

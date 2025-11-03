@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+
 import { FaArrowRight } from "react-icons/fa";
 
 const LaptopCarousal = () => {

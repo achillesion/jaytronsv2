@@ -34,8 +34,6 @@
   --sidebar-accent-foreground: hsl(240 5.9% 10%);
   --sidebar-border: hsl(220 13% 91%);
   --sidebar-ring: hsl(217.2 91.2% 59.8%);
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 .dark {
@@ -138,6 +136,44 @@
 * {
   border-color: var(--border);
 }
+.theme-ripple {
+  position: fixed;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-wave 0.9s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.9;
+}
+
+/* 🌑 Ripple for Light → Dark */
+.ripple-dark {
+  background: radial-gradient(circle, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+/* 🌕 Ripple for Dark → Light */
+.ripple-light {
+  background: radial-gradient(circle, #ffffff 0%, #f3f4f6 50%, #ffffff 100%);
+}
+
+/* Expansion Animation */
+@keyframes ripple-wave {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+
+
 
 body {
   background: var(--background);
@@ -467,7 +503,7 @@ body {
   animation: fadeInUp 0.4s ease-out forwards;
 }
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(15px);
@@ -476,33 +512,8 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-@keyframes themeRippleSlow {
-  0% {
-    transform: scale(0);
-    opacity: 0.6;
-  }
-  50% {
-    transform: scale(4);
-    opacity: 0.3;
-  }
-  100% {
-    transform: scale(8);
-    opacity: 0;
-  }
-}
+} */
 
-.animate-themeRippleSlow {
-  position: absolute;
-  top: 0%; /* starts from top */
-  left: 50%;
-  width: 200vmax;
-  height: 200vmax;
-  transform: translate(-50%, 0%) scale(0);
-  border-radius: 9999px;
-  animation: themeRippleSlow 1.5s ease-out forwards; /* slower */
-  z-index: 50;
-}
 
 /* Profile Image Custom Media Queries for Laptop Devices */
 .profile-image {

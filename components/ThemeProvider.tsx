@@ -43,7 +43,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     // Apply transition only after the first render to avoid flash
     const root = document.documentElement;
-    root.style.transition = "background-color 0.4s, color 0.4s";
+    // root.style.transition = "background-color 0.4s, color 0.4s";
 
   }, [theme, mounted]);
 
